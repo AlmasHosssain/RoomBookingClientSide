@@ -1,9 +1,8 @@
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { Observable, throwError } from 'rxjs';
-
 import { ErrorHandlerClass } from '../../shared/errorHandaler/ServerRoorHandler'
+import { HttpClient } from '@angular/common/http';
 import { IRooms } from 'src/app/shared/models/IRooms';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { catchError } from 'rxjs/operators'
 import { environment } from './../../../environments/environment';
 
