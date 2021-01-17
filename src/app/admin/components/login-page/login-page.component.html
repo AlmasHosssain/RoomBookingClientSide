@@ -1,0 +1,35 @@
+<div class="registration my-5 col-sm-6 offset-4" fxLayout="column" fxLayoutAlign="center center">
+    <div class="head text-center">
+        <button class="mt-5" mat-fab color="accent" aria-label="Example icon button with a delete icon">
+    <mat-icon>person_add_alt_1</mat-icon>
+  </button><br><br>
+        <b class="text-white">
+    Entry by using Admin email & password
+  </b>
+    </div>
+    <div class="tail">
+
+    </div>
+</div>
+
+<div class="box text-center col-sm-6 offset-4">
+    <form [formGroup]="entryAsAdmin" (ngSubmit)="onSubmit()">
+        <h2 class="mt-4">ADMIN PANEL</h2>
+        <div class="boxItem">
+            <mat-form-field appearance="standard">
+                <mat-label>Enter admin email</mat-label>
+                <input autocomplete="off" required matInput placeholder="Enter your email please" formControlName="email">
+            </mat-form-field>
+        </div>
+
+        <div class="boxItem">
+            <mat-form-field appearance="standard">
+                <mat-label>Enter admin password</mat-label>
+                <input autocomplete="off" type="password" required matInput placeholder="Enter your password please" formControlName="password">
+            </mat-form-field>
+        </div>
+        <button [disabled]="entryAsAdmin.invalid" class="submitButton" mat-raised-button>
+    SIGN IN
+  </button>
+    </form>
+</div>

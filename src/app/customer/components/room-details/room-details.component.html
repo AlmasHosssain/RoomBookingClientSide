@@ -1,0 +1,22 @@
+<div fxLayout="column" class="my-4 mainBox">
+    <div fxLayout="row" fxLayoutAlign="center start">
+        <img class="headImage" [src]="singleRoom?.mainImage">
+    </div>
+    <div class="subImageList" fxLayout="row" fxLayoutAlign="center center">
+        <img style="width: 260px;height: 150px;" [src]="subImageList[0].subImageUrl">
+        <img class="mx-4" style="width: 260px;height: 150px;" [src]="subImageList[1].subImageUrl">
+        <img style="width: 260px;height: 150px;" [src]="subImageList[2].subImageUrl">
+    </div>
+
+    <div class="mt-3" fxLayout="row" fxLayoutAlign="space-between center">
+        <div fxFlex="60" class="textArea">
+            <h2>{{singleRoom?.roomName}}</h2>
+            <h3>{{singleRoom?.roomType}}</h3>
+            <h4><b style="color: red;">{{singleRoom?.price}} per day</b></h4>
+            <p>{{singleRoom?.description}}</p>
+        </div>
+        <div>
+            <button mat-raised-button color="accent" (click)=goForBooking(singleRoom._id)>Booking</button>
+        </div>
+    </div>
+</div>

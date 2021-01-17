@@ -1,0 +1,14 @@
+<div fxLayout="row" class="my-5 p-3" fxLayoutAlign="center center">
+    <mat-card>
+        <mat-card-content>
+            <h1><b>Customer Name : </b>{{singleBooking.customerName}}</h1>
+            <p> <b>Customer Email : </b> {{singleBooking.email}}</p>
+            <p> <b>Customer PhNo : </b>{{singleBooking.phoneNo}}</p>
+            <p> <b>Customer Address : </b>{{singleBooking.address.substring(0,39)}}</p>
+            <p> <b>Payment Status : </b>{{singleBooking.paymentStatus}}</p>
+            <p> <b>Room Name : </b>{{singleBooking.roomDescription[0].roomName}}</p>
+            <p> <b>Cost Per Day : </b>{{singleBooking.roomDescription[0].costPerDay}}</p>
+            <p> <b>Book duration : </b> {{singleBooking.duration | date: 'mediumDate'}}</p>
+        </mat-card-content>
+    </mat-card>
+</div>

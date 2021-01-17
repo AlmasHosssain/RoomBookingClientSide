@@ -1,0 +1,25 @@
+.banner {
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 2rem 1rem;
+    text-align: center;
+    text-transform: capitalize;
+    letter-spacing: 3px;
+    height: 240px;
+    width: 400px;
+    border-radius: 10px;
+    div {
+        width: 10rem;
+        height: 3px;
+        background: #af9a7d;
+        margin-left: 100px;
+    }
+    p {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+    }
+    h1 {
+        font-size: 2.5rem;
+    }
+}

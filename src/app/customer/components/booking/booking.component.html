@@ -1,0 +1,48 @@
+<div fxLayout="row" fxLayoutAlign="center end">
+    <h1 style="border-bottom: 1px solid black;">Booking here</h1>
+</div>
+<div class="mt-5 mb-4" fxLayout="row" fxLayout.lt.sm="column" fxLayoutAlign="center center">
+    <form [formGroup]="customerData" (ngSubmit)="onSubmit()">
+        <div class="example-container">
+            <mat-form-field appearance="outline" [style.width.px]="440">
+                <mat-label>Enter your name</mat-label>
+                <input required matInput placeholder="Enter your name please" formControlName="customerName">
+            </mat-form-field>
+        </div>
+        <div class="example-container">
+            <mat-form-field appearance="outline" [style.width.px]="440">
+                <mat-label>Enter your email</mat-label>
+                <input required matInput placeholder="Enter your email please" formControlName="email">
+            </mat-form-field>
+        </div>
+        <div class="example-container">
+            <mat-form-field appearance="outline" [style.width.px]="440">
+                <mat-label>Enter your Phone Number</mat-label>
+                <input required matInput placeholder="Enter your phone number please" formControlName="phoneNo">
+            </mat-form-field>
+        </div>
+        <div class="example-container">
+            <mat-form-field appearance="outline" [style.width.px]="440">
+                <mat-label>Enter your address</mat-label>
+                <input required matInput placeholder="Enter your address please" formControlName="address">
+            </mat-form-field>
+        </div>
+        <div class="example-container">
+            <mat-form-field appearance="outline" [style.width.px]="440">
+                <mat-label>How log you will stay with us</mat-label>
+                <input autocomplete="off" matInput formControlName="duration" required [matDatepicker]="picker">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+        </div>
+
+        <div class="example-container">
+            <mat-form-field appearance="outline" [style.width.px]="440">
+                <mat-label>Give your payment Information</mat-label>
+                <input required matInput placeholder="Enter your payment status" formControlName="paymentStatus">
+            </mat-form-field>
+        </div>
+
+        <button type="submit" mat-raised-button color="warn">Booking</button>
+    </form>
+</div>

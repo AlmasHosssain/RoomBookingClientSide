@@ -1,0 +1,28 @@
+<div fxLayout="row" fxLayoutAlign="center start">
+    <angular-image-slider [autoRotate]="true" [autoRotateAfter]="2000" [autoRotateRight]="true" [images]="imagesUrl">
+    </angular-image-slider>
+</div>
+
+<div fxLayout="row" fxLayoutAlign="center start">
+    <h2 style="border-bottom: 1px solid black;">All Rooms</h2>
+</div>
+
+<mat-grid-list cols="3" class="my-5">
+    <mat-grid-tile *ngFor="let item of rooms">
+        <mat-card class="mx-4 my-5">
+            <img matCardImage [src]="item.mainImage" [alt]="item.mainImage">
+            <mat-card-header>
+                <div fxLayout="row" fxLayoutAlign="space-between start">
+                    <mat-card-subtitle>{{item.roomName}}</mat-card-subtitle>
+                </div>
+            </mat-card-header>
+            <mat-card-content>
+                {{item.description.substring(0,100)}}
+                <h3 class="text-danger"><b>{{item.price}} per day</b></h3>
+            </mat-card-content>
+            <mat-card-actions class="mb-1">
+                <button color="primary" mat-raised-button (click)="goDetails(item._id)">VIEW DETAILS</button>
+            </mat-card-actions>
+        </mat-card>
+    </mat-grid-tile>
+</mat-grid-list>
